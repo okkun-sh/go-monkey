@@ -1,21 +1,21 @@
 package parser
 
-import {
+import (
 	"monkey/ast"
 	"monkey/lexer"
 	"monkey/token"
-}
+)
 
 type Parser struct {
 	l *lexer.Lexer
 
-	curToken token.Token
+	curToken  token.Token
 	peekToken token.Token
 }
 
 func New(l *lexer.Lexer) *Parser {
 	p := &Parser{l: l}
-	
+
 	// 2つトークンを読み込む。curToken と peekToken の両方がセットされる
 	p.nextToken()
 	p.nextToken()
@@ -31,4 +31,3 @@ func (p *Parser) nextToken() {
 func (p *Parser) ParseProgram() *ast.Program {
 	return nil
 }
-
