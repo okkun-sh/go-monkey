@@ -24,7 +24,6 @@ func New(l *lexer.Lexer) *Parser {
 	// 2つトークンを読み込む。curToken と peekToken の両方がセットされる
 	p.nextToken()
 	p.nextToken()
-
 	return p
 }
 
